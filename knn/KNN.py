@@ -33,6 +33,7 @@ def train(predictData, trainDataMat, classLabels, k):
     #(5)返回类别数最多的标签作为待分类数据的标签
     #对标签的个数进行降序排列
     sortedClassCount = sorted(classCount.iteritems(),key=operator.itemgetter(1),reverse=True)
+
     return sortedClassCount[0][0]
 
 if __name__ == "__main__":
