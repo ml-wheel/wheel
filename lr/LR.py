@@ -32,8 +32,10 @@ def GradAscent(trainMat,Labels,numIter=200):
             error = Labels[i] - h
             #只选择当前样本进行回归系数的更新
             weight += alpha*error*trainMat[i]
+
     return weight
 
+#测试
 if __name__=='__main__':
     train_data,labels = load_data()
     weight = GradAscent(train_data,labels)
