@@ -299,7 +299,7 @@ def createPlot(inTree):
 
 
 if __name__ == '__main__':
-    dataSet, labels=load_data()
+    dataSet, labels=load_data("dataset.dat")
     labels1 = labels[:]  # 复制，两个变量任意一个发生变化都不会影响另外一个
     myTree=createTree(dataSet, labels)
     print(myTree)
