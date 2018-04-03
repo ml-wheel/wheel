@@ -15,7 +15,7 @@ def train(predictData, trainDataMat, classLabels, k):
     # 训练数据集的总数
     dataSize = trainDataMat.shape[0]
     # (1)求距离
-    # 测试数据和所有预测数据算距离
+    # 预测数据和所有训练数据算距离
     diffMat = tile(predictData, (dataSize, 1)) - trainDataMat  # 可以说是相当关键的一步了
     sqDiffMat = diffMat ** 2
     sqdistance = sqDiffMat.sum(axis=1)
